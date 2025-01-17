@@ -1,101 +1,149 @@
-import Image from "next/image";
+import PlayButtonCircleIcon from "@/public/icons/play-button-circle"
+import Image from "next/image"
+import { BsArrowUpRight } from "react-icons/bs"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	return (
+		<section className="w-full def-pdg">
+			<section className="w-full h-svh fl-cc py-2 md:py-5">
+				<div className="size-full bg-seccol rounded-[24px] fl-tl fl-c text-pricol overflow-hidden">
+					{/* //!mobile */}
+					<div className="size-full relative fl-tl fl-c fl-sb gap-2 pt-[5rem] px-2 md:hidden">
+						<div className="fl-tl fl-c">
+							<p className="text-[10px] font-semibold">(01)</p>
+							<h1 className="font-bold text-[72px] leading-none font-fonthd">
+								MINOLTA
+								<br />
+								PRO
+								<br />
+								16
+							</h1>
+							<p className="text-[10px] font-semibold">
+								{new Date().getFullYear()}
+							</p>
+						</div>
+						<div className="w-full fl-cr mt-auto mb-12">
+							<div className="fl-bl fl-c gap-2 max-w-[60%]">
+								<p className="text-right">
+									Capture sharp images and Full HD (1080p) videos with the
+									Minolta Pro Shot 16 Mega Pixel HD Digital Camera
+								</p>
+								<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right">
+									Read More
+								</p>
+							</div>
+						</div>
+						<div className="w-full fl-cl fl-sb gap-2 mb-2">
+							<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center">
+								Start Shopping
+							</button>
+							<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
+						</div>
+						<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-cc">
+							<div className="relative size-[90vw] z-30 right-4 bottom-2">
+								<Image
+									alt="hero-img-i"
+									src={"/images/mnl_i.png"}
+									fill
+									className="object-center object-cover"
+								/>
+							</div>
+							<div className="absolute size-[90vw] z-20">
+								<Image
+									alt="hero-img-ii"
+									src={"/images/mnl_ii.png"}
+									fill
+									className="object-center object-cover"
+								/>
+							</div>
+						</div>
+						<div className="absolute bottom-[4rem] left-2 fl-cl">
+							<div className="size-[40vw]">
+								<Image
+									alt="hero-img-i"
+									src={"/images/mnl_vi.svg"}
+									fill
+									className="object-cover object-center"
+								/>
+							</div>
+						</div>
+					</div>
+					{/* //!desktop */}
+					<div className="hidden md:fl-cl md:fl-c pt-[4rem] size-full">
+						<div className="mx-auto fl-cl fl-c">
+							<h1 className="font-fonthd font-bold text-[11.3vw] 2xl:text-[10.625rem] text-center whitespace-nowrap leading-none">
+								MINOLTA PRO 16
+							</h1>
+							<p className="self-stretch fl-cl fl-sb font-semibold pl-[10px] pr-3">
+								<span>(01)</span>
+								<span>{new Date().getFullYear()}</span>
+							</p>
+						</div>
+						<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-bc pb-8">
+							<div className="relative size-[40vw] z-30 right-8 bottom-4 max-w-[704px] max-h-[738px]">
+								<Image
+									alt="hero-img-i"
+									src={"/images/mnl_i.png"}
+									fill
+									className="object-center object-cover"
+								/>
+							</div>
+							<div className="absolute size-[40vw] z-20 max-w-[704px] max-h-[738px]">
+								<Image
+									alt="hero-img-ii"
+									src={"/images/mnl_ii.png"}
+									fill
+									className="object-center object-cover"
+								/>
+							</div>
+						</div>
+						<div className="absolute right-[7rem] top-[40%] fl-cl">
+							<div className="size-[150px]">
+								<Image
+									alt="hero-img-i"
+									src={"/images/mnl_vi.svg"}
+									fill
+									className="object-cover object-center"
+								/>
+							</div>
+						</div>
+						<div className="w-full fl-bl fl-sb mt-auto mb-8 pl-4 pr-[5vw] relative z-20">
+							<div className="fl-tl fl-c gap-8 w-[21vw]">
+								<p className="font-medium text-5xl">
+									Minolta Pro Shot 16 Mega Pixel HD Digital Camera
+								</p>
+								<div className="w-full fl-cl fl-sb gap-2 mb-2">
+									<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center">
+										Start Shopping
+									</button>
+									<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
+								</div>
+							</div>
+							<div className="fl-tl fl-c gap-5 w-[13vw]">
+								<p className="font-medium text-2xl">
+									Captures sharp images and Full HD (1080p) video
+								</p>
+								<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right">
+									Read More
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+			<section className="w-full def-pdg py-[3rem] fl-cl fl-c gap-4 md:fl-r md:fl-sb">
+				<p>Sold on</p>
+				<div>
+					<span className="relative">
+						<img
+							src={"/images/amazon.svg"}
+							alt="trusted"
+							className="object-center object-cover"
+						/>
+					</span>
+				</div>
+			</section>
+		</section>
+	)
 }
