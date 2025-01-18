@@ -8,14 +8,14 @@ import "./colors.css"
 import "./globals.css"
 
 export const metadata: Metadata = {
-	title: "",
-	description: "",
+	title: "Minolta",
+	description: "Minolta — Capture your vision in HD",
 	openGraph: {
-		title: "",
-		description: "",
+		title: "Minolta",
+		description: "Minolta — Capture your vision in HD",
 		url: `${get_base_url()}`,
 		images: [""],
-		siteName: "",
+		siteName: "minolta.com",
 		type: "website",
 	},
 	metadataBase: new URL(`${get_base_url()}`),
