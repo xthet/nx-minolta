@@ -19,17 +19,17 @@ export default function Home() {
 				<section className="w-full h-svh fl-cc py-2 md:py-5 overflow-hidden">
 					<div className="size-full bg-seccol rounded-[24px] fl-tl fl-c text-iitxtcol overflow-hidden">
 						{/* //!mobile */}
-						<div className="size-full relative fl-tl fl-c fl-sb gap-2 pt-[5rem] px-2 md:hidden">
+						<div className="size-full relative fl-tl fl-c fl-sb gap-2 pt-[5rem] px-2 lg:hidden">
 							<div className="fl-tl fl-c">
-								<p className="text-[10px] font-semibold">(01)</p>
-								<h1 className="font-bold text-[72px] leading-none font-fonthd">
+								<p className="text-[10px] md:text-base font-semibold">(01)</p>
+								<h1 className="font-bold text-[72px] md:text-[7rem] leading-none font-fonthd">
 									MINOLTA
 									<br />
 									PRO
 									<br />
 									16
 								</h1>
-								<p className="text-[10px] font-semibold">
+								<p className="text-[10px] md:text-base font-semibold">
 									{new Date().getFullYear()}
 								</p>
 							</div>
@@ -51,7 +51,7 @@ export default function Home() {
 								<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
 							</div>
 							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-cc">
-								<div className="relative w-[90vw] aspect-[0.95/1] z-30 right-3 bottom-2">
+								<div className="relative w-[90vw] aspect-[0.95/1] max-w-[704px] z-30 right-3 bottom-2">
 									<Image
 										alt="hero-img-i"
 										src={"/images/mnl_i.png"}
@@ -59,7 +59,7 @@ export default function Home() {
 										className="object-center object-cover"
 									/>
 								</div>
-								<div className="absolute w-[90vw] aspect-[0.95/1] z-20">
+								<div className="absolute w-[90vw] max-w-[704px] aspect-[0.95/1] z-20">
 									<Image
 										alt="hero-img-ii"
 										src={"/images/mnl_ii.png"}
@@ -68,8 +68,8 @@ export default function Home() {
 									/>
 								</div>
 							</div>
-							<div className="absolute bottom-[4rem] left-2 fl-cl">
-								<div className="size-[40vw]">
+							<div className="absolute top-[72%] md:top-[80%] left-2 fl-cl">
+								<div className="size-[40vw] max-w-[150px] max-h-[150px]">
 									<Image
 										alt="hero-img-i"
 										src={"/images/mnl_vi.svg"}
@@ -80,7 +80,7 @@ export default function Home() {
 							</div>
 						</div>
 						{/* //!desktop */}
-						<div className="hidden md:fl-cl md:fl-c pt-[4rem] size-full">
+						<div className="hidden lg:fl-cl md:fl-c pt-[4rem] size-full">
 							<div className="mx-auto fl-cl fl-c">
 								<h1 className="font-fonthd font-bold text-[11.3vw] 2xl:text-[10.625rem] text-center whitespace-nowrap leading-none">
 									MINOLTA PRO 16
@@ -108,7 +108,7 @@ export default function Home() {
 									/>
 								</div>
 							</div>
-							<div className="absolute right-[7rem] top-[40%] fl-cl">
+							<div className="absolute left-[78%] top-[40%] fl-cl">
 								<div className="size-[150px]">
 									<Image
 										alt="hero-img-i"

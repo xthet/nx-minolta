@@ -11,10 +11,10 @@ export default function Navbar() {
 		<nav className="fixed top-0 left-0 right-0 pt-2 md:pt-5 px-2 md:p-5 z-[989]">
 			{/* //!mobile */}
 			<div
-				className={`w-full text-txtcol grid grid-cols-3 gap-2 p-2 md:hidden ${
+				className={`w-full text-iitxtcol grid grid-cols-3 gap-2 p-2 md:hidden ${
 					scrollY <= 15
 						? ""
-						: "bg-[hsla(93,42%,13%,0.3)] backdrop-blur-lg shadow-[0px_2px_10px_8px_rgba(0,0,0,0.1)]"
+						: "bg-[hsla(93,42%,13%,0.3)] text-txtcol backdrop-blur-lg shadow-[0px_2px_10px_8px_rgba(0,0,0,0.1)]"
 				}`}
 			>
 				<span className="fl-cl">
@@ -26,9 +26,17 @@ export default function Navbar() {
 				<div className="w-full fl-cr font-medium">
 					{/* <span>EN</span> */}
 					{/* <span className="w-[1px] h-3 bg-iitxtcol"></span> */}
-					<span className="fl-cc size-[46px] rounded-full border border-txtcol">
+					<span
+						className={`fl-cc size-[46px] rounded-full border border-iitxtcol ${
+							scrollY <= 15 ? "" : "border-txtcol"
+						}`}
+					>
 						<span className="relative">
-							<ShoppingBagIcon className="w-6 h-6 text-txtcol " />
+							<ShoppingBagIcon
+								className={`w-6 h-6 text-iitxtcol ${
+									scrollY <= 15 ? "" : "text-txtcol"
+								}`}
+							/>
 						</span>
 					</span>
 					{/* <span className="w-[1px] h-3 bg-iitxtcol"></span>
