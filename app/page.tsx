@@ -273,7 +273,10 @@ export default function Home() {
 							<span className="fl-bl fl-c gap-2 md:gap-4 self-stretch fl-sb md:justify-start">
 								<span className="fl-cl gap-1 ">
 									{Array.from(new Array(5)).map((e, i) => (
-										<BsStarFill className="size-4 md:size-6 lg:size-8 text-[--iiyellow]" />
+										<BsStarFill
+											className="size-4 md:size-6 lg:size-8 text-[--iiyellow]"
+											key={i}
+										/>
 									))}
 								</span>
 								<span className="md:text-2xl">12.832 Review</span>
