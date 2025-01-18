@@ -11,29 +11,29 @@ export default function Navbar() {
 		<nav className="fixed top-0 left-0 right-0 pt-2 md:pt-5 px-2 md:p-5 z-[989]">
 			{/* //!mobile */}
 			<div
-				className={`w-full grid grid-cols-3 gap-2 p-2 md:hidden ${
+				className={`w-full text-txtcol grid grid-cols-3 gap-2 p-2 md:hidden ${
 					scrollY <= 15
 						? ""
 						: "bg-[hsla(93,42%,13%,0.3)] backdrop-blur-lg shadow-[0px_2px_10px_8px_rgba(0,0,0,0.1)]"
 				}`}
 			>
 				<span className="fl-cl">
-					<HamburgerMenuIcon className="size-[46px] text-pricol cursor-pointer" />
+					<HamburgerMenuIcon className="size-[46px] cursor-pointer" />
 				</span>
-				<span className="fl-cc text-center text-2xl font-bold cursor-pointer text-pricol">
+				<span className="fl-cc text-center text-2xl font-bold cursor-pointer ">
 					MINOLTA.
 				</span>
 				<div className="w-full fl-cr font-medium">
 					{/* <span>EN</span> */}
-					{/* <span className="w-[1px] h-3 bg-pricol"></span> */}
-					<span className="fl-cc size-[46px] rounded-full border border-pricol">
+					{/* <span className="w-[1px] h-3 bg-iitxtcol"></span> */}
+					<span className="fl-cc size-[46px] rounded-full border border-txtcol">
 						<span className="relative">
-							<ShoppingBagIcon className="w-6 h-6 text-pricol " />
+							<ShoppingBagIcon className="w-6 h-6 text-txtcol " />
 						</span>
 					</span>
-					{/* <span className="w-[1px] h-3 bg-pricol"></span>
+					{/* <span className="w-[1px] h-3 bg-iitxtcol"></span>
 					<span className="fl-cc bg-subcol size-[46px] rounded-full">
-						<ProfileIcon className="w-6 h-6 text-pricol" />
+						<ProfileIcon className="w-6 h-6 text-iitxtcol" />
 					</span> */}
 				</div>
 			</div>
@@ -42,19 +42,20 @@ export default function Navbar() {
 			<div
 				className={`w-full md:grid md:grid-cols-3 gap-2 p-3 hidden ${
 					scrollY <= 15
-						? "text-pricol"
-						: "bg-[hsla(93,42%,13%,0.3)] backdrop-blur-lg shadow-[0px_2px_10px_8px_rgba(0,0,0,0.1)] text-subcol"
+						? "text-iitxtcol"
+						: "bg-[hsla(93,42%,13%,0.3)] backdrop-blur-lg text-subcol"
+					// : "bg-[hsla(93,42%,13%,0.3)] backdrop-blur-lg shadow-[0px_2px_10px_8px_rgba(0,0,0,0.1)] text-subcol"
 				}`}
 			>
 				<div className="fl-cl gap-4">
 					<div className="rounded-full bg-subcol px-4 py-3 fl-cl gap-2">
-						<HamburgerMenuIcon className="w-4 h-4 text-pricol" />
-						<span className="font-medium text-pricol">Menu</span>
+						<HamburgerMenuIcon className="size-6 text-iitxtcol" />
+						<span className="font-medium text-iitxtcol">Menu</span>
 					</div>
 
 					<div className="fl-cl gap-2 bg-subcol rounded-full px-4 py-3 w-[20vw] max-w-[297px]">
-						<SearchIcon className="w-4 h-4 text-pricol" />
-						<span className="font-medium text-pricol">Search</span>
+						<SearchIcon className="size-6 text-iitxtcol" />
+						<span className="font-medium text-iitxtcol">Search</span>
 					</div>
 				</div>
 				<div className="font-bold text-3xl w-full fl-cc text-center">
@@ -62,19 +63,19 @@ export default function Navbar() {
 				</div>
 				<div className="w-full fl-cr gap-6 font-medium">
 					{/* <span>EN</span> */}
-					{/* <span className="w-[1px] h-3 bg-pricol"></span> */}
+					{/* <span className="w-[1px] h-3 bg-iitxtcol"></span> */}
 					<span
 						className={`fl-cc size-[46px] rounded-full border ${
-							scrollY <= 15 ? "border-pricol" : "border-subcol"
+							scrollY <= 15 ? "border-iitxtcol" : "border-subcol"
 						}`}
 					>
 						<span className="relative">
 							<ShoppingBagIcon className="w-6 h-6" />
 						</span>
 					</span>
-					<span className="w-[1px] h-3 bg-pricol"></span>
+					<span className="w-[1px] h-3 bg-iitxtcol"></span>
 					<span className="fl-cc bg-subcol size-[46px] rounded-full">
-						<ProfileIcon className="w-6 h-6 text-pricol" />
+						<ProfileIcon className="w-6 h-6 text-iitxtcol" />
 					</span>
 				</div>
 			</div>

@@ -1,10 +1,11 @@
 :root {
 	--txtcol: #f2fa9b;
+	--iitxtcol: #1f2e13;
 	--defcol: #ffffff;
-	--pricol: #1f2e13;
+	--pricol: #132e17;
 	--seccol: #dfe58f;
 	--subcol: #f7fbc0;
 	--iorange: #f44b0d;
 	--iyellow: #f3d152;
-	--iiyelow: #facc15;
+	--iiyellow: #facc15;
 }

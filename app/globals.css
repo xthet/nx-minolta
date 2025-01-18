@@ -36,4 +36,11 @@ a {
 		@apply px-2
 		md:px-5;
 	}
+
+	.ref-pdg {
+		@apply px-2
+		md:px-5
+		lg:px-[60px]
+		xl:px-20;
+	}
 }

@@ -15,6 +15,7 @@ export default {
 			colors: {
 				pricol: "var(--pricol)",
 				txtcol: "var(--txtcol)",
+				iitxtcol: "var(--iitxtcol)",
 				seccol: "var(--seccol)",
 				defcol: "var(--defcol)",
 				subcol: "var(--subcol)",
