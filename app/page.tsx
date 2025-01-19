@@ -1,3 +1,4 @@
+"use client"
 import FacebookIcon from "@/public/icons/facebook"
 import InstagramIcon from "@/public/icons/instagram"
 import LinkedinIcon from "@/public/icons/linkedin"
@@ -5,35 +6,37 @@ import PlayButtonCircleIcon from "@/public/icons/play-button-circle"
 import TiktokIcon from "@/public/icons/tiktok"
 import YoutubeIcon from "@/public/icons/youtube"
 import Image from "next/image"
-import {
-	BsArrowRight,
-	BsArrowUpRight,
-	BsStar,
-	BsStarFill,
-} from "react-icons/bs"
+import { useRef } from "react"
+import { BsArrowRight, BsArrowUpRight, BsStarFill } from "react-icons/bs"
+import useHomeAnimations from "./animations"
 
 export default function Home() {
+	const container = useRef<any>(null)
+	useHomeAnimations(container)
+
 	return (
-		<section className="w-full max-w-[1440px] mx-auto">
+		<section ref={container} className="w-full max-w-[1440px] mx-auto">
 			<section className="w-full def-pdg">
 				<section className="w-full h-svh fl-cc py-2 md:py-5 overflow-hidden">
 					<div className="size-full bg-seccol rounded-[24px] fl-tl fl-c text-iitxtcol overflow-hidden">
 						{/* //!mobile */}
 						<div className="size-full relative fl-tl fl-c fl-sb gap-2 pt-[5rem] px-2 lg:hidden">
 							<div className="fl-tl fl-c">
-								<p className="text-[10px] md:text-base font-semibold">(01)</p>
-								<h1 className="font-bold text-[72px] md:text-[7rem] leading-none font-fonthd">
+								<p className="text-[10px] md:text-base font-semibold anilbl1 invisible">
+									(01)
+								</p>
+								<h1 className="font-bold text-[72px] md:text-[7rem] leading-none font-fonthd anih1 invisible">
 									MINOLTA
 									<br />
 									PRO
 									<br />
 									16
 								</h1>
-								<p className="text-[10px] md:text-base font-semibold">
+								<p className="text-[10px] md:text-base font-semibold anilbl1 invisible">
 									{new Date().getFullYear()}
 								</p>
 							</div>
-							<div className="w-full fl-cr mt-auto mb-12">
+							<div className="w-full fl-cr mt-auto mb-12 anisubh invisible">
 								<div className="fl-bl fl-c gap-2 max-w-[60%]">
 									<p className="text-right">
 										Capture sharp images and Full HD (1080p) videos with the
@@ -50,7 +53,7 @@ export default function Home() {
 								</button>
 								<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
 							</div>
-							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-cc">
+							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-cc aniheroimg invisible">
 								<div className="relative w-[90vw] aspect-[0.95/1] max-w-[704px] z-30 right-3 bottom-2">
 									<Image
 										alt="hero-img-i"
@@ -68,7 +71,7 @@ export default function Home() {
 									/>
 								</div>
 							</div>
-							<div className="absolute top-[72%] md:top-[80%] left-2 fl-cl">
+							<div className="absolute top-[72%] md:top-[80%] left-2 fl-cl anisubh invisible">
 								<div className="size-[40vw] max-w-[150px] max-h-[150px]">
 									<Image
 										alt="hero-img-i"
@@ -82,15 +85,15 @@ export default function Home() {
 						{/* //!desktop */}
 						<div className="hidden lg:fl-cl md:fl-c pt-[4rem] size-full">
 							<div className="mx-auto fl-cl fl-c">
-								<h1 className="font-fonthd font-bold text-[11.3vw] 2xl:text-[10.625rem] text-center whitespace-nowrap leading-none">
+								<h1 className="font-fonthd font-bold text-[11.3vw] 2xl:text-[10.625rem] text-center whitespace-nowrap leading-none invisible anih1">
 									MINOLTA PRO 16
 								</h1>
-								<p className="self-stretch fl-cl fl-sb font-semibold pl-[10px] pr-3">
+								<p className="self-stretch fl-cl fl-sb font-semibold pl-[10px] pr-3 anilbl1 invisible">
 									<span>(01)</span>
 									<span>{new Date().getFullYear()}</span>
 								</p>
 							</div>
-							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-bc pb-8">
+							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-bc pb-8 aniheroimg invisible">
 								<div className="relative w-[40vw] aspect-[0.95/1] z-30 right-6 bottom-2 max-w-[704px] max-h-[738px]">
 									<Image
 										alt="hero-img-i"
@@ -108,7 +111,7 @@ export default function Home() {
 									/>
 								</div>
 							</div>
-							<div className="absolute left-[78%] top-[40%] fl-cl">
+							<div className="absolute left-[78%] top-[40%] fl-cl anisubh invisible">
 								<div className="size-[150px]">
 									<Image
 										alt="hero-img-i"
@@ -119,18 +122,18 @@ export default function Home() {
 								</div>
 							</div>
 							<div className="w-full fl-bl fl-sb mt-auto mb-8 pl-4 pr-[5vw] relative z-20">
-								<div className="fl-tl fl-c gap-8 w-[21vw]">
+								<div className="fl-tl fl-c gap-8 w-[21vw] anicta invisible">
 									<p className="font-medium text-5xl">
 										Minolta Pro Shot 16 Mega Pixel HD Digital Camera
 									</p>
 									<div className="w-full fl-cl fl-sb gap-2 mb-2">
-										<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center">
+										<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center duration-300">
 											Start Shopping
 										</button>
-										<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
+										<PlayButtonCircleIcon className="size-10 text-[--iorange] hover:fill-white cursor-pointer duration-300 hover:[&>circle]:text-white" />
 									</div>
 								</div>
-								<div className="fl-tl fl-c gap-5 w-[13vw]">
+								<div className="fl-tl fl-c gap-5 w-[13vw] anisubh invisible">
 									<p className="font-medium text-2xl">
 										Captures sharp images and Full HD (1080p) video
 									</p>
@@ -144,8 +147,8 @@ export default function Home() {
 				</section>
 			</section>
 
-			<section className="w-full def-pdg">
-				<section className="w-full def-pdg py-[3rem] fl-cl fl-c gap-4 md:fl-r md:fl-sb">
+			<section className="w-full def-pdg my-[1.5rem]">
+				<section className="w-full def-pdg py-[1.5rem] fl-cl fl-c gap-4 md:fl-r md:fl-sb border-y border-[rgba(255,255,255,0.1)]">
 					<p className="text-xl md:text-2xl lg:text-[2.5rem]">Sold on</p>
 					<div className="w-full fl-cl fl-sb gap-2 md:w-2/3">
 						<span className="relative">
@@ -185,12 +188,12 @@ export default function Home() {
 					<small>(02)</small>
 					<small>Minolta</small>
 				</div>
-				<div className="w-full fl-cl -mt-2 md:-mt-10">
+				<div className="w-full fl-cl -mt-2 md:-mt-10 anidesc1">
 					<h3 className="max-w-[791px] text-4xl md:text-[3rem] lg:text-[4rem] leading-[1.1] font-medium">
 						16 Megapixel Still Image Resolution with Optical Image Stabilization
 					</h3>
 				</div>
-				<div className="w-full fl-cr">
+				<div className="w-full fl-cr anidesc2">
 					<p className="max-w-[696px] md:text-2xl leading-[1.5]">
 						Preserve the moment with stunning high-resolution 16 megapixel
 						photos suitable for cropping or enlarging. Advanced built-in optical
@@ -198,7 +201,7 @@ export default function Home() {
 						and vibration, so your photos come out crisp & clear no matter what!
 					</p>
 				</div>
-				<div className="w-full fl-tl flex-col-reverse md:fl-r md:fl-bl md:fl-sb gap-2">
+				<div className="w-full fl-tl flex-col-reverse md:fl-r md:fl-bl md:fl-sb gap-2 anidescimg1 invisible">
 					<small className="text-xs md:text-base">2024</small>
 
 					<div className="w-full relative md:w-1/2 flex-grow max-w-[1065px] fl-cc overflow-hidden aspect-[1.91/1]">
@@ -215,13 +218,16 @@ export default function Home() {
 			<section className="w-full my-[4rem] md:my-[8.25rem] ref-pdg">
 				<div className="w-full border-y border-[rgba(255,255,255,0.24)] py-8 md:py-[4rem] fl-cr">
 					<div className="fl-tl fl-c gap-2 md:fl-r md:fl-sb  md:fl-cl w-full max-w-[1065px]">
-						<h3 className="text-2xl leading-[1.1] max-w-[415px] md:text-5xl font-medium">
-							1080p Full HD{" "}
-							<small className="text-xs md:text-base font-bold">(03)</small>
-							<br />
-							Video Recording
-						</h3>
-						<p className="md:text-2xl max-w-[386px] leading-[1.5]">
+						<div className="max-w-[415px] fl-tl fl-sb relative">
+							<h3 className="text-2xl leading-[1.1]  md:text-5xl font-medium anidesc3">
+								1080p Full HD <br />
+								Video Recording
+							</h3>
+							<small className="text-xs md:text-base absolute right-0 top-4">
+								(03)
+							</small>
+						</div>
+						<p className="md:text-2xl max-w-[386px] leading-[1.5] anidesc4">
 							Shoot crystal-clear high definition video in 1080p Full HD at a
 							frame rate of 30 frames per second.
 						</p>
@@ -230,7 +236,7 @@ export default function Home() {
 			</section>
 
 			<section className="w-full fl-tl fl-c gap-4 md:fl-r relative md:fl-tr ref-pdg">
-				<div className="w-full md:w-[43.82vw] min-h-[300px] h-[44.5vw] max-w-[760px] max-h-[641px] fl-cr relative md:absolute md:left-0 overflow-hidden">
+				<div className="w-full md:w-[43.82vw] min-h-[300px] h-[44.5vw] max-w-[760px] max-h-[641px] fl-cr relative md:absolute md:left-0 overflow-hidden aniprodimg">
 					<div className="h-full w-[48.8%] rounded-full bg-seccol"></div>
 					<div className="absolute left-0 right-[6.4%]">
 						<div className="relative w-full aspect-[1.92/1.25] fl-cc">
@@ -243,7 +249,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="fl-tl fl-c gap-4 w-full md:w-1/2">
+				<div className="fl-tl fl-c gap-4 w-full md:w-1/2 aniproddets">
 					<div className="fl-tl fl-c gap-4 w-full">
 						<small className="text-xs md:text-base">(04)</small>
 						<h3 className="font-medium text-4xl md:text-[3rem] lg:text-[4rem] leading-[1.1]">
@@ -294,8 +300,8 @@ export default function Home() {
 			</section>
 
 			<section className="w-full def-pdg mt-[4rem] md:mt-[10rem]">
-				<div className="w-full fl-cl flex-col-reverse md:fl-r gap-4 md:fl-sb bg-seccol text-iitxtcol rounded-[1.5rem] ref-pdg py-8">
-					<div className="fl-tl fl-c gap-2 max-w-[521px] md:gap-4">
+				<div className="w-full fl-cl flex-col-reverse md:fl-r gap-4 md:fl-sb bg-seccol text-iitxtcol rounded-[1.5rem] ref-pdg py-8 anicta2bg">
+					<div className="fl-tl fl-c gap-2 max-w-[521px] md:gap-4 anicta2dets">
 						<small className="text-xs md:text-base font-bold">(05)</small>
 						<h2 className="font-bold text-4xl md:text-[3rem] lg:text-[4rem] leading-[1.1]">
 							Built-In WiFi with App Integration
@@ -306,7 +312,7 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className="relative fl-cc overflow-hidden min-w-[300px] w-[28.15vw] aspect-[1.18/1] max-w-[405.36px]">
+					<div className="relative fl-cc overflow-hidden min-w-[300px] w-[28.15vw] aspect-[1.18/1] max-w-[405.36px] anicta2img">
 						<Image
 							alt="front-view"
 							src={"/images/mnl_v.png"}
@@ -317,8 +323,8 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="w-full fl-cc md:fl-cr ref-pdg mt-[4.5rem] lg:mt-[6.25rem]">
-				<div className="fl-bl pb-3 md:pb-6 border-b border-txtcol gap-8 md:w-[60vw] md:fl-sb">
+			<section className="w-full fl-cc md:fl-cr ref-pdg mt-[4.5rem] lg:mt-[6.25rem] ">
+				<div className="fl-bl pb-3 md:pb-6 border-b border-txtcol gap-8 md:w-[60vw] md:fl-sb hover:bg-seccol hover:text-pricol duration-300 cursor-pointer">
 					<h2 className="text-5xl md:text-[3.5rem] lg:text-[5rem] xl:text-[6.25rem] leading-[0.1] md:leading-none w-1/2 flex-grow">
 						Subscribe
 						<i className="text-2xl md:text-[1.25rem] lg:text-[2rem] not-italic">
