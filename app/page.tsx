@@ -42,16 +42,16 @@ export default function Home() {
 										Capture sharp images and Full HD (1080p) videos with the
 										Minolta Pro Shot 16 Mega Pixel HD Digital Camera
 									</p>
-									<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right">
+									<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right hover:-translate-y-1 cursor-pointer duration-300">
 										Read More
 									</p>
 								</div>
 							</div>
-							<div className="w-full fl-cl fl-sb gap-2 mb-2">
-								<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center">
+							<div className="w-full fl-cl fl-sb gap-2 mb-2 invisible animbherocta relative z-20">
+								<button className="w-1/2 flex-grow self-stretch font-medium text-defcol bg-[--iorange] fl-cc cursor-pointer hover:text-[--iorange] hover:bg-defcol rounded-full text-center durantion-300">
 									Start Shopping
 								</button>
-								<PlayButtonCircleIcon className="size-10 text-[--iorange]" />
+								<PlayButtonCircleIcon className="size-10 text-[--iorange] hover:fill-white cursor-pointer duration-300 hover:[&>circle]:text-white" />
 							</div>
 							<div className="absolute top-0 bottom-0 right-0 left-0 z-10 fl-cc aniheroimg invisible">
 								<div className="relative w-[90vw] aspect-[0.95/1] max-w-[704px] z-30 right-3 bottom-2">
@@ -137,7 +137,7 @@ export default function Home() {
 									<p className="font-medium text-2xl">
 										Captures sharp images and Full HD (1080p) video
 									</p>
-									<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right">
+									<p className="fl-br gap-1 pb-1 border-b border-pricol font-semibold text-right hover:-translate-y-1 cursor-pointer duration-300">
 										Read More
 									</p>
 								</div>
@@ -324,7 +324,7 @@ export default function Home() {
 			</section>
 
 			<section className="w-full fl-cc md:fl-cr ref-pdg mt-[4.5rem] lg:mt-[6.25rem] ">
-				<div className="fl-bl pb-3 md:pb-6 border-b border-txtcol gap-8 md:w-[60vw] md:fl-sb hover:bg-seccol hover:text-pricol duration-300 cursor-pointer">
+				<div className="fl-bl pb-3 md:pb-6 border-b border-txtcol gap-8 md:w-[60vw] md:fl-sb hover:-translate-y-1 md:hover:bg-seccol md:hover:text-pricol duration-300 cursor-pointer">
 					<h2 className="text-5xl md:text-[3.5rem] lg:text-[5rem] xl:text-[6.25rem] leading-[0.1] md:leading-none w-1/2 flex-grow">
 						Subscribe
 						<i className="text-2xl md:text-[1.25rem] lg:text-[2rem] not-italic">

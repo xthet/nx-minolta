@@ -39,6 +39,15 @@ export default function useHomeAnimations(scope: RefObject<any>) {
 				autoAlpha: 0,
 			})
 
+			gsap.from(".animbherocta", {
+				y: "+=40",
+				opacity: 0,
+				ease: "back(1.7)",
+				delay: 0.3,
+				duration: 1.5,
+				autoAlpha: 0,
+			})
+
 			gsap.from(".anidesc1", {
 				scrollTrigger: {
 					trigger: ".anidesc1",
