@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 		title: "Minolta",
 		description: "Minolta — Capture your vision in HD",
 		url: `${get_base_url()}`,
-		images: [""],
+		images: ["/images/dd2.png"],
 		siteName: "minolta.com",
 		type: "website",
 	},
